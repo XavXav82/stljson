@@ -70,8 +70,8 @@ function getAllUrlParams(url) {
   let searchVal = getAllUrlParams().keyword;
   let e=""
   
-  if(searchVal.search("+") != -1){
-    e = searchVal.split("+")
+  if(searchVal.search("\+") != -1){
+    e = searchVal.split("\+")
     searchVal = e.join(" ");
   }
   let tempName = ""
