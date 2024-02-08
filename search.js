@@ -70,9 +70,9 @@ function getAllUrlParams(url) {
   let searchVal = getAllUrlParams().keyword;
   let e=""
   
-  if(searchVal.search("\\+") != -1){
+  if(searchVal.search(/+/) != -1){
     console.log("hi");
-    e = searchVal.split("\\+")
+    e = searchVal.split(/+/)
     searchVal = e.join(" ");
   }
   let tempName = ""
