@@ -76,7 +76,7 @@ function getAllUrlParams(url) {
       tempName2 = tempName.toLowerCase();
       
       if(tempName2.search(searchVal) != -1){
-        console.log(tempName2);
+        console.log(String(i));
         //window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+String(i)+"/profile");
         break
       }
