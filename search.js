@@ -74,10 +74,11 @@ function getAllUrlParams(url) {
     try{
       tempName = json[String(i)]["name"];
       tempName2 = tempName.toLowerCase();
-      console.log(tempName2);
+      
       if(tempName2.search(searchVal) != -1){
-        
+        console.log(tempName2);
         //window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+String(i)+"/profile");
+        break
       }
     } catch{}
   }
