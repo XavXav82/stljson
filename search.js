@@ -77,7 +77,6 @@ function getAllUrlParams(url) {
   }
   let tempName = ""
   let tempName2 = ""
-  console.log(searchVal);
   for(let i = 1;i<12842;i++){
     try{
       tempName = json[String(i)]["name"];
@@ -90,6 +89,8 @@ function getAllUrlParams(url) {
       }
     } catch{}
   }
+
+  window.location.replace("https://link.stleonards.vic.edu.au/");
   
   //window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+searchVal+"/profile");
 })();
