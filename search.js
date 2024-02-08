@@ -69,10 +69,12 @@ function getAllUrlParams(url) {
   //let searchVal = URLSearchParams.get("keyword");
   let searchVal = getAllUrlParams().keyword;
   let tempName = ""
+  let tempName2 = ""
   for(let i = 1;i<12400;i++){
     try{
       tempName = json[String(i)]["name"];
-      if(tempName.search(searchVal) != -1){
+      tempName2 = tempName.toLowerCase();
+      if(tempName2.search(searchVal) != -1){
         window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+String(i)+"/profile");
       }
     } catch{}
