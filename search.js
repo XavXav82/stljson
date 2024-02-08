@@ -71,6 +71,7 @@ function getAllUrlParams(url) {
   let tempName = ""
   console.log(searchVal);
   for(let i = 1;i<12400;i++){
+    console.log("hi")
     tempName = json[String(i)]["name"];
     if(tempName.search(searchVal) != -1){
       console.log(tempName);
