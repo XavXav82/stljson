@@ -1,4 +1,4 @@
-function getAllUrlParams(url) {
+9function getAllUrlParams(url) {
 
   // get query string from url (optional) or window
   var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
@@ -72,7 +72,8 @@ function getAllUrlParams(url) {
   for(let i = 1;i<12400;i++){
     tempName = json[String(i)]["name"];
     if(tempName.search(searchVal != -1)){
-      window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+String(i)+"/profile");
+      console.log(tempName);
+      //window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+String(i)+"/profile");
     }
   }
   
