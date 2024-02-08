@@ -69,4 +69,9 @@ function getAllUrlParams(url) {
   //let searchVal = URLSearchParams.get("keyword");
   let searchVal = getAllUrlParams().keyword;
   console.log(json[searchVal]["name"]);
+
+  window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+searchVal+"/profile");
 })();
+
+
+
