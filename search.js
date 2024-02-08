@@ -68,7 +68,6 @@ function getAllUrlParams(url) {
   const json = await response.json();
   //let searchVal = URLSearchParams.get("keyword");
   let searchVal = getAllUrlParams().keyword;
-  console.log(json[searchVal]["name"]);
   let tempName = ""
   for(let i = 1;i<12400;i++){
     tempName = json[String(i)]["name"];
