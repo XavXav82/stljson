@@ -1,4 +1,4 @@
-9function getAllUrlParams(url) {
+function getAllUrlParams(url) {
 
   // get query string from url (optional) or window
   var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
