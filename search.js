@@ -72,7 +72,7 @@ function getAllUrlParams(url) {
   console.log(searchVal);
   for(let i = 1;i<12400;i++){
     tempName = json[String(i)]["name"];
-    if(tempName.search(searchVal != -1)){
+    if(tempName.search(searchVal) != -1){
       console.log(tempName);
       //window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+String(i)+"/profile");
     }
