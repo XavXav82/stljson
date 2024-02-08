@@ -71,6 +71,7 @@ function getAllUrlParams(url) {
   let e=""
   
   if(searchVal.search("\\+") != -1){
+    console.log("hi");
     e = searchVal.split("\\+")
     searchVal = e.join(" ");
   }
