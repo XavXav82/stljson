@@ -1,4 +1,3 @@
-let jsonFile = 0;
-fetch("./grades.json").then((response) => response.json()).then((json) => jsonFile = json);
-//var jsonFile = ("grades.json");
-console.log(jsonFile);
+let response = await fetch("./grades.json");
+const json = await response.json();
+console.log(json["1"]["name"]);
