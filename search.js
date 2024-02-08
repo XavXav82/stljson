@@ -70,6 +70,7 @@ function getAllUrlParams(url) {
   let searchVal = getAllUrlParams().keyword;
   let tempName = ""
   let tempName2 = ""
+  console.log(searchVal);
   for(let i = 1;i<12842;i++){
     try{
       tempName = json[String(i)]["name"];
