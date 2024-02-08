@@ -68,6 +68,12 @@ function getAllUrlParams(url) {
   const json = await response.json();
   //let searchVal = URLSearchParams.get("keyword");
   let searchVal = getAllUrlParams().keyword;
+  let e=""
+  
+  if(searchVal.search("+") != -1){
+    e = searchVal.split("+")
+    searchVal = e.join(" ");
+  }
   let tempName = ""
   let tempName2 = ""
   console.log(searchVal);
