@@ -69,14 +69,13 @@ function getAllUrlParams(url) {
   //let searchVal = URLSearchParams.get("keyword");
   let searchVal = getAllUrlParams().keyword;
   let tempName = ""
-  console.log(searchVal);
   for(let i = 1;i<12400;i++){
-    console.log("hi")
-    tempName = json[String(i)]["name"];
-    if(tempName.search(searchVal) != -1){
-      console.log(tempName);
-      //window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+String(i)+"/profile");
-    }
+    try{
+      tempName = json[String(i)]["name"];
+      if(tempName.search(searchVal) != -1){
+        window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+String(i)+"/profile");
+      }
+    } catch{}
   }
   
   //window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+searchVal+"/profile");
