@@ -86,7 +86,7 @@ function getAllUrlParams(url) {
       if(tempName2.search(searchVal) != -1){
         //console.log(String(i));
         window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+String(i)+"/profile");
-        return
+        return;
   
       }
     } catch{}
