@@ -75,6 +75,7 @@ function getAllUrlParams(url) {
     e = searchVal.split(/[+]/)
     searchVal = e.join(" ");
   }
+  
   let tempName = ""
   let tempName2 = ""
   for(let i = 1;i<12842;i++){
@@ -85,7 +86,8 @@ function getAllUrlParams(url) {
       if(tempName2.search(searchVal) != -1){
         //console.log(String(i));
         window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+String(i)+"/profile");
-        break
+        return
+  
       }
     } catch{}
   }
