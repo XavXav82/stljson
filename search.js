@@ -64,7 +64,7 @@ function getAllUrlParams(url) {
 }
 
 (async () => {
-  let response = await fetch("./grades.json");
+  let response = await fetch("./JustNames.json");
   const json = await response.json();
   //let searchVal = URLSearchParams.get("keyword");
   let searchVal = getAllUrlParams().keyword;
