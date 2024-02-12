@@ -79,19 +79,21 @@ function getAllUrlParams(url) {
   let tempName = "";
   let tempName2 = "";
   let names = [];
+  let param = ""
   for(let i = 1;i<12842;i++){
     try{
       tempName = json[String(i)];
       tempName2 = tempName.toLowerCase();
       
       if(tempName2.search(searchVal) != -1){
-        l = tempName2 + String(i);
+        l = tempName2 +"+"+ String(i);
         names.push(l);
       }
       
     } catch{}
   }
-  console.log(names);
+  param = names.join()
+  console.log(param);
   //window.location.replace("https://link.stleonards.vic.edu.au/");
   //window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+searchVal+"/profile");
 })();
