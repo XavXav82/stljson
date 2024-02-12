@@ -72,27 +72,27 @@ function getAllUrlParams(url) {
   
   if(searchVal.search(/[+]/) != -1){
     console.log("hi");
-    e = searchVal.split(/[+]/)
+    e = searchVal.split(/[+]/);
     searchVal = e.join(" ");
   }
   
-  let tempName = ""
-  let tempName2 = ""
+  let tempName = "";
+  let tempName2 = "";
+  let names = [];
   for(let i = 1;i<12842;i++){
     try{
       tempName = json[String(i)];
       tempName2 = tempName.toLowerCase();
       
       if(tempName2.search(searchVal) != -1){
-        //console.log(String(i));
-        window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+String(i)+"/profile");
-        return;
-  
+        l = tempName2 + String(i);
+        names.push(l);
       }
+      console.log(names);
     } catch{}
   }
 
-  window.location.replace("https://link.stleonards.vic.edu.au/");
+  //window.location.replace("https://link.stleonards.vic.edu.au/");
   
   //window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+searchVal+"/profile");
 })();
