@@ -80,7 +80,7 @@ function getAllUrlParams(url) {
   let tempName2 = ""
   for(let i = 1;i<12842;i++){
     try{
-      tempName = json[String(i)]["name"];
+      tempName = json[String(i)];
       tempName2 = tempName.toLowerCase();
       
       if(tempName2.search(searchVal) != -1){
