@@ -93,9 +93,13 @@ function getAllUrlParams(url) {
     } catch{}
   }
   param = names.join()
-  console.log(param);
-  //window.location.replace("https://link.stleonards.vic.edu.au/");
-  //window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+searchVal+"/profile");
+  //console.log(param);
+  
+  if(param != []){
+    window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+searchVal+"/profile");
+  }else{
+    window.location.replace("https://link.stleonards.vic.edu.au/");
+  }
 })();
 
 
