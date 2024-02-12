@@ -96,7 +96,7 @@ function getAllUrlParams(url) {
   //console.log(param);
   
   if(param != []){
-    window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+searchVal+"/profile");
+    window.location.replace("https://link.stleonards.vic.edu.au/search?keyword="+param);
   }else{
     window.location.replace("https://link.stleonards.vic.edu.au/");
   }
