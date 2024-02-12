@@ -88,12 +88,11 @@ function getAllUrlParams(url) {
         l = tempName2 + String(i);
         names.push(l);
       }
-      console.log(names);
+      
     } catch{}
   }
-
+  console.log(names);
   //window.location.replace("https://link.stleonards.vic.edu.au/");
-  
   //window.location.replace("https://link.stleonards.vic.edu.au/eportfolio/"+searchVal+"/profile");
 })();
 
