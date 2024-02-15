@@ -71,6 +71,8 @@ function getAllUrlParams(url) {
   let searchFilter = "";
   console.log(searchVal1);
   if(searchVal1.split(",").length>1){searchFilter = searchVal1.split(",")[1];}
+  console.log(searchVal);
+  console.log(searchFilter);
   let e=""
   if(searchFilter==""){let response = await fetch("./JustNames.json");const json = await response.json();}
   else if(searchFilter = "student"){let response = await fetch("./JustStudents.json");const json = await response.json();}
