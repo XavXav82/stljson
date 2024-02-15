@@ -69,7 +69,7 @@ function getAllUrlParams(url) {
     let searchVal1 = getAllUrlParams().keyword;
     let searchVal = searchVal1.split(",")[0];
     let searchFilter = "";
-    if(searchVal1.split(",").length>1){searchFilter = searchVal1.split(",")[1];}
+    if(searchVal1.split("%2C").length>1){searchFilter = searchVal1.split(",")[1];}
     let e="";
     var json;
     if(searchFilter==""){let response = await fetch("./JustNames.json"); json = await response.json();}
