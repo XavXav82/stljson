@@ -64,14 +64,16 @@ function getAllUrlParams(url) {
 }
 
 (async () => {
-  let response = await fetch("./JustNames.json");
-  const json = await response.json();
+  
   //let searchVal = URLSearchParams.get("keyword");
   let searchVal1 = getAllUrlParams().keyword;
   let searchVal = searchVal1.split(",")[0];
-  if(searchVal1.split(",").length>1){let searchFilter = searchVal1.split(",")[1];}
+  let searchFilter = "";
+  if(searchVal1.split(",").length>1){searchFilter = searchVal1.split(",")[1];}
   let e=""
-  
+  if(searchFilter==""){let response = await fetch("./JustNames.json");}
+  else if(searchFilter = "student"){let response = await fetch("./JustStudents.json");}
+  const json = await response.json();
   if(searchVal.search(/[+]/) != -1){
     console.log("hi");
     e = searchVal.split(/[+]/);
