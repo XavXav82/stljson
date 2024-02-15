@@ -69,6 +69,7 @@ function getAllUrlParams(url) {
   let searchVal1 = getAllUrlParams().keyword;
   let searchVal = searchVal1.split(",")[0];
   let searchFilter = "";
+  console.log(searchVal1);
   if(searchVal1.split(",").length>1){searchFilter = searchVal1.split(",")[1];}
   let e=""
   if(searchFilter==""){let response = await fetch("./JustNames.json");const json = await response.json();}
@@ -97,12 +98,12 @@ function getAllUrlParams(url) {
     } catch{}
   }
   param = names.join()
-  //console.log(param);
+  console.log(param);
   
   if(param != []){
-    window.location.replace("https://link.stleonards.vic.edu.au/search?keyword="+param+"&searchval="+searchVal);
+    //window.location.replace("https://link.stleonards.vic.edu.au/search?keyword="+param+"&searchval="+searchVal);
   }else{
-    window.location.replace("https://link.stleonards.vic.edu.au/");
+    //window.location.replace("https://link.stleonards.vic.edu.au/");
   }
 })();
 
