@@ -77,7 +77,7 @@ function getAllUrlParams(url) {
   let e="";
   let searchurl = 0;
   var json;
-  if(searchFilter==""){let response = await fetch("./JustNames.json"); json = await response.json();}
+  if(searchFilter==""){let response = await fetch("./jsons/JustNames.json"); json = await response.json();}
   else if(searchFilter == "student"){let response = await fetch("./jsons/JustStudents.json"); json = await response.json();}
   else if(searchFilter == "parent"){let response = await fetch("./jsons/JustParents.json"); json = await response.json();searchurl = 1;}
   else if(searchFilter == "allen"){let response = await fetch("./jsons/Allen.json"); json = await response.json();}
