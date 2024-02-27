@@ -110,9 +110,11 @@ function getAllUrlParams(url) {
   //console.log(param);
   
   if(param != []){
-    //if(searchurl ==0){
+    if(searchFilter != "parent"){
       window.location.replace("https://link.stleonards.vic.edu.au/search?keyword="+param+"&searchval="+searchVal);
-    //}
+    }else{
+      window.location.replace("https://link.stleonards.vic.edu.au/search?keyword="+param+"&searchval="+searchVal+"&parent=yep");
+    }
   }else{
     window.location.replace("https://link.stleonards.vic.edu.au/");
   }
